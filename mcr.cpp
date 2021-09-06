@@ -1,5 +1,6 @@
 #include <iostream>
 using namespace std;
+//just add one line commend for exersice
 bool isWin(char game[3][3]){
 	bool win = false;
 	if (game[0][0] == game[0][1] && game[0][1] == game[0][2] && (game[0][0] == 'X' || game[0][0] == 'O')) win = true;
@@ -20,9 +21,10 @@ int main(){
 	char game[3][3] = {' '}; // Tic-tac-toe
 	char player1 = 'X';
 	char player2 = 'O';
+	int n;
 	bool turn = true; // false for player 1's turn, true for player 2's turn. Player 1 first.
 	cout << "X = Player 1" << endl << "O = Player 2" << endl;
-       for (int n=0; n<9; n++){
+       for (n=0; n<9; n++){
 			turn = !turn;  // use the not-operator to change true to false or false to true.
 		    if (turn == false)
 				cout << "Player 1: ";
@@ -39,7 +41,7 @@ int main(){
 				break; // need to terminate the problem
 			}
 		}
-	if (i==3) // all celles with i=0 to 2 have been inputted above but no winner yet
+	if (n==9) // all celles with i=0 to 2 have been inputted above but no winner yet
 	   cout << "Tie!" << endl;
 
 	// show the game to console
